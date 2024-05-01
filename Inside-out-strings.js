@@ -14,3 +14,13 @@ An example should clarify:
 
 
 // Solution
+
+const insideOut = (() => {
+  const strrev = str => str.split('').reverse().join('');
+  const turnout = str => {
+    let n = str.length >> 1;
+    let [_, a, b, c] = str.match(RegExp(`(.{${n}})(.?)(.{${n}})`));
+    return strrev(a) + b + strrev(c);
+  }
+  return str => str.split(' ').map(turnout).join(' ');
+})();
