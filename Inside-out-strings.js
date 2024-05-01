@@ -26,3 +26,12 @@ const insideOut = (() => {
 })();
 
 // or
+
+const insideOutArray = (str) => {  
+  return str.split(' ').map(x => {    
+    let left = x.substring(0, Math.floor(x.length / 2)).split('').reverse().join('')
+    let right = x.substring(Math.ceil(x.length / 2)).split('').reverse().join('')
+    let middle = x[Math.floor(x.length / 2)]    
+    return x.length % 2 ? left + middle + right : left + right
+  }).join(' ')
+}
