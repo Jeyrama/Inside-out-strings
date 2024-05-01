@@ -24,3 +24,5 @@ const insideOut = (() => {
   }
   return str => str.split(' ').map(turnout).join(' ');
 })();
+
+// or
