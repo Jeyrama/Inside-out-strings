@@ -11,3 +11,6 @@ the 'middle' letter of the word where it is.
 An example should clarify:
   'taxi' would become 'atix' 'taxis' would become 'atxsi'
 */
+
+
+// Solution
